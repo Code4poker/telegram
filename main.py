@@ -9,6 +9,7 @@ import os
 
 storage = MemoryStorage()
 TOKEN = os.getenv('BOT_TOKEN')
+TOKEN = str(TOKEN)
 bot = Bot(token=TOKEN)
 dp = Dispatcher(bot, storage=storage)
 
