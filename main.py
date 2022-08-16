@@ -62,7 +62,7 @@ async def way(message: types.Message, state: FSMContext):
 
 @dp.message_handler(state=Condition.question)
 async def users_question(message: types.Message, state: FSMContext):
-    chat_id = '1505714650'  # добавить нужный id
+    chat_id = '1853809909'  # добавить нужный id
     await bot.send_message(chat_id, "@" + message.from_user.username + ": " + message.text)
     await Condition.fork.set()
     await bot.send_message(message.chat.id, 'Виталия свяжется с вами и ответит на вопрос', reply_markup=keyboard.menu)
