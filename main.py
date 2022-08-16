@@ -139,7 +139,7 @@ async def registration_age(message: types.Message, state: FSMContext):
 @dp.message_handler(state=Condition.confirm_user)
 async def confirming(message: types.Message, state: FSMContext):
     if message.text.lower() == 'да':
-        chat_id = '1505714650'  # добавить нужный id
+        chat_id = '1853809909'  # добавить нужный id
         info = f'{name_user} {surname_user} в возрасте {age_user} записан(а) на процедуру \'{number_user}\''
         await bot.send_message(chat_id, "@" + message.from_user.username + ": " + info)
         await Condition.fork.set()
